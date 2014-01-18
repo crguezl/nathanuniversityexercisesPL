@@ -14,3 +14,7 @@ Converting abc to postscript:
   yaps twinkle.abc
 
 * http://www.mandolintab.net/abcconverter.php abc converter
+* http://abcj.ganderband.com/ (Java editor)
+* https://code.google.com/p/abcjs/ (JavaScript). See a demo at http://drawthedots.com/abcjs/index.html.
+  A fork of the original repo is here: https://github.com/lfborjas/abcjs (support for diff coloring).
+* http://abc2xml.appspot.com/
