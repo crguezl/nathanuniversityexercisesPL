@@ -18,7 +18,7 @@ start =
     expression
 
 expression =    atom
-             / _ '(' el:expressionlist _ ')' { return el; }
+             / LEFTPAR el:expressionlist RIGHTPAR { return el; }
 
 expressionlist = f:expression el:( __ es:expression { return es;} )* 
                    { return [ f ].concat(el); }
@@ -26,10 +26,14 @@ expressionlist = f:expression el:( __ es:expression { return es;} )*
 validchar
     = [0-9a-zA-Z_?!+\-=@#$%^&*/.]
 
+// tokens
+
 atom =
     _ chars:validchar+
         { return chars.join(""); }
 
-__ = [ \t\r\n]+
-
-_  = [ \t\r\n]*
+white = [ \t\r\n]
+__ = white+
+_  = white*
+LEFTPAR  = _ '('
+RIGHTPAR = _ ')'
