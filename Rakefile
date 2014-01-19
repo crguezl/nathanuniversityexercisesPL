@@ -10,6 +10,17 @@ task :run => :compile do
   sh "node main.js"
 end
 
+desc "Parse pegs4.pegjs and leave it in an object called scheme"
+task :browser do
+  sh "pegjs -e scheme pegs4.pegjs"
+end
+
+desc "example of using chai"
+task :chai do
+  sh "pegjs pegs4.pegjs"
+  sh "node pegs7_chai.js"
+end
+
 # brew install abcmidi
 desc "yaps Takes an abc music file and converts it to PostScript"
 task :ps do 
