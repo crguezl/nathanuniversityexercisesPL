@@ -39,6 +39,27 @@ suite('add', function() {
     });
 });
 
+suite('translate and evaluate', function() {
+    test('add two numbers', function() {
+        t = scheem.parse('(+ 2 3)')
+        assert.deepEqual(
+            evalScheem(t, {}), 5
+        );
+    });
+    test('(+ 3 (* 2 2)) = 7', function() {
+        t = scheem.parse('(+ 3 (* 2 2))')
+        assert.deepEqual(
+            evalScheem(t, {}), 7
+        );
+    });
+    test('(+ a (* 2 2)); a is 3; = 7', function() {
+        t = scheem.parse('(+ a (* 2 2))')
+        assert.deepEqual(
+            evalScheem(t, {a : 3}), 7
+        );
+    });
+});
+
 
 suite('if', function() {
     test('(if #t 5 9) test', function() {

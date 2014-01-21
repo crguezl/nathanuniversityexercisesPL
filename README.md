@@ -3,7 +3,7 @@
 Next, integrate your Scheem parser and Scheem interpreter.
 
 First make a minor update to your parser so that it detects numbers.
-You want inputs like `5` to parse to the number 5 rather than the
+You want inputs like `5` to parse to the number `5` rather than the
 string `5`.
 
 Once you've got that done, you should be able to parse inputs like

@@ -1,0 +1,4 @@
+desc "Compile scheem grammar"
+task :default do
+  sh 'pegjs -e scheem pegs8.pegjs js/pegs8.js'
+end
