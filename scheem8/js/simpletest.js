@@ -41,13 +41,13 @@ suite('add', function() {
 
 
 suite('if', function() {
-    test('simple if', function() {
+    test('(if #t 5 9) test', function() {
         assert.deepEqual(
             evalScheem(['if', "#t", 5, 9], {}), 5
         );
     });
 
-    test('if 1 = 1', function() {
+    test('(if (= 1 1) 2 3) test', function() {
         assert.deepEqual(
             evalScheem(['if', ['=', 1, 1], 2, 3], {}), 2
         );
