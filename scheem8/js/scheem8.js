@@ -11,7 +11,7 @@
 
 var evalScheem = function (expr, env) {
     // Numbers evaluate to themselves
-    if (typeof expr === 'number') {
+    if (typeof expr === 'number' || expr === '#t' || expr === '#f') {
         return expr;
     }
     // Strings are variable references
@@ -69,6 +69,7 @@ var evalScheem = function (expr, env) {
            return evalScheem(expr[1][0], env);
         case 'cdr':
            return evalScheem(expr.slice(2), env);
+           return expr[1];
         case 'if':
            var bool = evalScheem(expr[1], env);
            if (bool === '#t') return evalScheem(expr[2], env);
