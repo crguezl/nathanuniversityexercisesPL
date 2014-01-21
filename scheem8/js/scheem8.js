@@ -1,20 +1,12 @@
 /*
-    http://nathansuniversity.com/scheem7.html
+    http://nathansuniversity.com/scheem8.html
 
-    The way if works is that it evaluates its first argument. If
-    the first argument evaluates to '#t' then it evaluates its
-    second argument and returns that value as its result. Otherwise
-    it evaluates its third argument and returns that value as its
-    result.
+    The page 'simpletest.html' is using Mocha to organize the tests and present them in
+    the browser in a nice way. Mocha is a JavaScript test framework for
+    organizing tests and presenting the results. It does the work of
+    formatting the test results onto a webpage so you don't have to
+    write any HTML.
 
-    One slightly tricky detail is that the first argument is always
-    evaluated, but the second and third arguments are only evaluated
-    conditionally. The second argument is only evaluated if the
-    condition was true, and the third argument is only evaluated
-    if the condition is not true. This matters when the expressions
-    do things like set! variables.
-
-    Write a version of evalScheem that works with = and the if form.
 */
 
 var evalScheem = function (expr, env) {
