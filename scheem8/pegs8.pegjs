@@ -20,7 +20,9 @@ validchar
 // tokens
 
 atom =
-    _ chars:validchar+
+      _ e:[0-9]+   
+        { return parseInt(e, 10); }
+   /  _ chars:validchar+
         { return chars.join(""); }
 
 white = [ \t\r\n] / comment

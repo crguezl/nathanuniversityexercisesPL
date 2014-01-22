@@ -58,6 +58,12 @@ suite('translate and evaluate', function() {
             evalScheem(t, {a : 3}), 7
         );
     });
+    test('(* a (* 2 2)); a is 3; = 12', function() {
+        t = scheem.parse('(* a (* 2 2))')
+        assert.deepEqual(
+            evalScheem(t, {a : 3}), 12
+        );
+    });
 });
 
 

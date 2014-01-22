@@ -16,7 +16,6 @@ var evalScheem = function (expr, env) {
     }
     // Strings are variable references
     if (typeof expr === 'string') {
-        if (expr.match(/^\d+$/)) return parseInt(expr, 10);
         return env[expr];
     }
     // Look at head of list for operation
