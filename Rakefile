@@ -12,7 +12,7 @@ end
 
 desc "Parse pegs4.pegjs and leave it in an object called scheme"
 task :browser do
-  sh "pegjs -e scheme pegs4.pegjs"
+  sh "pegjs -e scheme lesson3/pegs4.pegjs"
 end
 
 desc "example of using chai"

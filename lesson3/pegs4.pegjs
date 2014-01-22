@@ -15,7 +15,7 @@ Write a grammar for Scheem expressions using the definition of atoms above.
 
 */
 start =
-    expression
+    expression _
 
 expression =    atom
              / LEFTPAR el:expressionlist RIGHTPAR { return el; }
