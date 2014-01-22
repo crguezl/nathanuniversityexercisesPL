@@ -2,6 +2,7 @@ var assert = chai.assert;
 
 // Some unit tests
 
+/*
 suite('quote', function() {
     test('a number', function() {
         assert.deepEqual(
@@ -19,6 +20,7 @@ suite('quote', function() {
         );
     });
 });
+*/
 
 suite('add', function() {
     test('two numbers', function() {
@@ -35,6 +37,27 @@ suite('add', function() {
         assert.deepEqual(
             evalScheem(['+', 'dog', 'cat'], {}),
             42
+        );
+    });
+});
+
+
+suite('if', function() {
+    test('(if #t 5 9) test', function() {
+        assert.deepEqual(
+            evalScheem(['if', "#t", 5, 9], {}), 5
+        );
+    });
+
+    test('(if (= 1 1) 2 3) test', function() {
+        assert.deepEqual(
+            evalScheem(['if', ['=', 1, 1], 2, 3], {}), 2
+        );
+    });
+
+    test('(if (= 1 1) (if (= 2 3) 10 11) 12) test', function() {
+        assert.deepEqual(
+          evalScheem(['if', ['=', 1, 1], ['if', ['=', 2, 3], 10, 11], 12], {}), 11
         );
     });
 });
@@ -64,25 +87,14 @@ suite('translate and evaluate', function() {
             evalScheem(t, {a : 3}), 12
         );
     });
-});
-
-
-suite('if', function() {
-    test('(if #t 5 9) test', function() {
+    test('(if  (= a 1) (* 2 2) (+ 3 3)); a = 1', function() {
         assert.deepEqual(
-            evalScheem(['if', "#t", 5, 9], {}), 5
+            compile('(if  (= a 1) (* 2 2) (+ 3 3))', {a : 1}), 4
         );
     });
-
-    test('(if (= 1 1) 2 3) test', function() {
+    test('(cdr (quote (4 5 6)))', function() {
         assert.deepEqual(
-            evalScheem(['if', ['=', 1, 1], 2, 3], {}), 2
-        );
-    });
-
-    test('(if (= 1 1) (if (= 2 3) 10 11) 12) test', function() {
-        assert.deepEqual(
-          evalScheem(['if', ['=', 1, 1], ['if', ['=', 2, 3], 10, 11], 12], {}), 11
+            evalScheemString('(cdr (quote (4 5 6)))', {a : 1}), [5, 6]
         );
     });
 });

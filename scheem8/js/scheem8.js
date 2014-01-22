@@ -68,11 +68,19 @@ var evalScheem = function (expr, env) {
         case 'car':
            return evalScheem(expr[1][0], env);
         case 'cdr':
-           return evalScheem(expr.slice(2), env);
-           return expr[1];
+           return evalScheem(expr[1]).slice(1);
         case 'if':
            var bool = evalScheem(expr[1], env);
            if (bool === '#t') return evalScheem(expr[2], env);
            return evalScheem(expr[3], env);
     }
 };
+
+var compile = function(input, env) {
+  env = env || {};
+  var t = scheem.parse(input);
+  return evalScheem(t, env);
+}
+
+
+var evalScheemString = compile;
