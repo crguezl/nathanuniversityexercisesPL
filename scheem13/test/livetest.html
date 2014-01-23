@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scheem Live Demo</title>
+  <!-- <script src="jquery-1.10.2.js"></script> -->
+  <script type="text/javascript"i src="jquery-1.11.0-beta1.js"></script>
+  <script src="scheem8.js"></script>
+  <script src="pegs8.js"></script>
+</head>
+<body>
+
+<textarea id="input" style="width:800px; height:300px;">
+(begin 
+  (set! x 3) 
+  (set! y 4)
+  (if 
+    (= (+ x 1)  y)
+    8
+    9
+  )
+)
+</textarea>
+
+<input id="submitbutton" type="button" value="Run" />
+
+<div id="console" class="console" style="border:solid 1px;">
+<p>This is where output goes.</p>
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+
