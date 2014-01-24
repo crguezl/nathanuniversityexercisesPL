@@ -2,18 +2,29 @@
   var log_console = function(msg) {
       $('#console').append('<p>' + msg + '</p>');
   };
+  var log_input = function(msg) {
+      $('#myinput').html('<p>' + msg + '</p>');
+  };
+
+  var log_parsed = function(msg) {
+      $('#parsed').html('<p>' + msg + '</p>');
+  };
+
+  var log_result = function(msg) {
+      $('#result').html('<p>' + msg + '</p>');
+  };
   // After page load
   $(function() {
     $('#submitbutton').click(function() {
         var user_text = $('#input').val();
         $('#console').html(''); // clear console
-        log_console('Your input was: "' + user_text + '"');
+        log_input('"' + user_text + '"');
         try {
             var parsed = scheem.parse(user_text);
-            log_console('Parsed: ' + JSON.stringify(parsed));
+            log_parsed(JSON.stringify(parsed));
             try {
                 var result = evalScheem(parsed, {});
-                log_console('Result: ' + JSON.stringify(result));
+                log_result(JSON.stringify(result));
             }
             catch(e) {
                 log_console('Eval Error: ' + e);

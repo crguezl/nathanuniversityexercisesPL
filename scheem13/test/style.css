@@ -4,9 +4,7 @@ body
    */
   /* background-image:url('simbolo.jpg');
    */
-  /*
-   * background-image:url('background.png');
-   */
+    background-image:url('background.png');
   /* background-color:#cccccc; */
   color: #000305;
   font-size: 87.5%; /* base font size is 14px */
@@ -97,4 +95,42 @@ a:active {color:#0000FF;}  /* selected link */
   border-radius: 5px; /* Add rounded borders to a div element */
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+}
+
+.mainContent {
+  line-height: 25px;
+  border-radius: 5px; /* Add rounded borders to a div element */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+  /*
+   * overflow: hidden;
+   */
+}
+
+.content {
+   width: 50%;
+   float:left
+}
+
+.topContent {
+   margin-top: 2px;
+   padding: 5% 3%;
+   background-color: #FFF;
+   border-radius: 5px; /* Add rounded borders to a div element */
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+}
+
+
+.top-sidebar, .middle-sidebar, .bottom-sidebar {
+  width: 45%;
+  margin-left: 1%;
+  margin-top: 2px;
+  margin-bottom: 2%;
+  float: left;
+  padding: 1% 2%;
+  background-color: #FFF;
+   border-radius: 5px; /* Add rounded borders to a div element */
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
 }
