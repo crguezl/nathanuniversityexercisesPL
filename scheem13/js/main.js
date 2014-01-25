@@ -1,7 +1,4 @@
   // Utility function to log messages
-  var log_console = function(msg) {
-      $('#console').append('<p>' + msg + '</p>');
-  };
   var log_input = function(msg) {
       $('#myinput').html('<p>' + msg + '</p>');
   };
@@ -27,11 +24,23 @@
                 log_result(JSON.stringify(result));
             }
             catch(e) {
-                log_console('Eval Error: ' + e);
+                log_result('Eval Error: ' + e);
             }
         }
         catch(e) {
-            log_console('Parse Error: ' + e);
+            log_result('Parse Error: ' + e);
         }
     });
   });
+
+$( "#example1" ).click(function( event ) {
+  event.preventDefault();
+  $( "#input" ).html( [
+    '(begin',
+    '  (define a 5)',
+    '  (define b 3)',
+    '  (if (= a b) 6 9)',
+    ')'
+    ].join("\n")
+  );
+});
