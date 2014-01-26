@@ -1,0 +1,166 @@
+body
+{
+  background-image:url('background.png');
+  color: #000305;
+  font-size: 87.5%; /* base font size is 14px */
+  font-family: Arial, 'Lucila Sans Unicode';
+  line-height: 1.5;
+  text-align: left;
+}
+
+a {
+  text-decoration: none; /* do not unfderline anchor links */
+}
+
+/*  
+ *  a:link - a normal, unvisited link
+ *  a:visited - a link the user has visited
+ *  a:hover - a link when the user mouses over it
+ *  a:active - a link the moment it is clicked
+ */
+
+a:link { color:#CF5C3F; }
+a:visited { color:#CF5C3F; }
+a:hover{ 
+  background-color:#CF5C3F; 
+  color: #FFF;
+}
+a:active {color:#0000FF;}  /* selected link */
+
+.body
+{
+  margin: 0 auto; /* This is the preferred way to accomplish
+                     horizontal centering with CSS, and works very well in most browsers
+                     with CSS2 support. */
+  width: 60%;
+  clear: both;
+
+}
+
+.mainHeader img {
+  width: 5%;
+  height: auto;
+  margin: 2% 0; 
+  /* The margin CSS property sets the margin for all four sides.
+     It is a shorthand to avoid setting each side separately with the
+     other margin properties: margin-top, margin-right, margin-bottom
+     and margin-left.
+   * Percentages refer to the width of the containing block
+   * Formal syntax: [ <length> | <percentage> | auto ]{1,4}
+   */
+}
+
+.mainHeader nav {
+  background-color:#666;
+  height: 40px;
+  border-radius: 5px; /* Add rounded borders to a div element */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+  /* See 
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius?redirectlocale=en-US&redirectslug=CSS%2Fborder-radius
+   */
+}
+
+.mainHeader nav ul {
+  list-style: none;
+  margin: 0 auto;
+}
+
+.mainHeader nav ul li {
+   float: left; /* With CSS float, an element can be pushed to the
+                   left or right, allowing other elements to wrap around it */
+   display: inline;
+
+}
+
+.mainHeader nav a:link, .mainHeader nav a:visited {
+  color:#FFF;
+  display: inline-block;
+  padding: 10px 10px;
+  /* come back here later to assign heigth */
+  height: 20px;
+}
+
+
+.mainHeader nav a:hover, .mainHeader nav a:active,
+.mainHeader nav .active a:link,
+.mainHeader nav .active a:visited {
+   background-color: CF5C3F;
+   text-shadow: none;
+}
+
+.mainHeader nav ul li a {
+  border-radius: 5px; /* Add rounded borders to a div element */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+}
+
+.mainContent {
+  margin-top: 2%;
+  line-height: 80%;
+  border-radius: 5px; /* Add rounded borders to a div element */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+  /*
+   * overflow: hidden;
+   */
+}
+
+.content {
+   width: 50%;
+   float:left
+}
+
+.topContent {
+   margin-top: 2%;
+   padding: 3% 3%;
+   background-color: #FFF;
+   border-radius: 5px; /* Add rounded borders to a div element */
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+}
+
+
+.top-sidebar, .middle-sidebar, .bottom-sidebar {
+  width: 45%;
+  height: 21.2%;
+  margin-left: 1%;
+  margin-top: 1%;
+  /* margin-bottom: 2%; */
+  float: left;
+  padding: 1% 2%;
+  background-color: #FFF;
+  border-radius: 5px; /* Add rounded borders to a div element */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+}
+
+.mainFooter {
+  width: 100%;
+  float: left;
+  border-radius: 5px; /* Add rounded borders to a div element */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
+  background-color: #666;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.mainFooter p {
+   width: 92%;
+   /* margin: 2% auto;*/
+   color: #FFF;
+}
+
+#input {
+  width:90%; 
+  height:59%;
+}
+
+/* The @media rule allows different style rules for different media
+   in the same style sheet */
+@media only screen and (min-width: 150px) and (max-width: 600px) {
+
+
+
+}
