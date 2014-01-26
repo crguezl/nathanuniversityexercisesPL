@@ -1,4 +1,9 @@
   // Utility function to log messages
+
+  var clear = function() {
+    $('#myinput').html('');
+    $('#parsed').html('');
+  };
   var log_input = function(msg) {
       $('#myinput').html('<p>' + msg + '</p>');
   };
@@ -24,10 +29,12 @@
                 log_result(JSON.stringify(result));
             }
             catch(e) {
+                clear();
                 log_result('Eval Error: ' + e);
             }
         }
         catch(e) {
+            clear();
             log_result('Parse Error: ' + e);
         }
     });
@@ -35,12 +42,14 @@
 
 $( "#example1" ).click(function( event ) {
   event.preventDefault();
-  $( "#input" ).html( [
+  clear();
+  $('#result').html('');
+
+  $( "#input" ).val([
     '(begin',
     '  (define a 5)',
     '  (define b 3)',
     '  (if (= a b) 6 9)',
     ')'
-    ].join("\n")
-  );
+    ].join("\n"));
 });

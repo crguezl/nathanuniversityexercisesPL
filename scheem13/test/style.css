@@ -96,7 +96,8 @@ a:active {color:#0000FF;}  /* selected link */
 }
 
 .mainContent {
-  line-height: 25px;
+  margin-top: 2%;
+  line-height: 80%;
   border-radius: 5px; /* Add rounded borders to a div element */
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px; /* WebKit supports a number of extensions to CSS that are prefixed with -webkit */
@@ -111,8 +112,8 @@ a:active {color:#0000FF;}  /* selected link */
 }
 
 .topContent {
-   margin-top: 2px;
-   padding: 5% 3%;
+   margin-top: 2%;
+   padding: 3% 3%;
    background-color: #FFF;
    border-radius: 5px; /* Add rounded borders to a div element */
    -moz-border-radius: 5px;
@@ -122,10 +123,10 @@ a:active {color:#0000FF;}  /* selected link */
 
 .top-sidebar, .middle-sidebar, .bottom-sidebar {
   width: 45%;
-  height: 24.5%;
+  height: 21.2%;
   margin-left: 1%;
-  margin-top: 2px;
-  margin-bottom: 2%;
+  margin-top: 1%;
+  /* margin-bottom: 2%; */
   float: left;
   padding: 1% 2%;
   background-color: #FFF;
@@ -145,12 +146,16 @@ a:active {color:#0000FF;}  /* selected link */
   margin-bottom: 2%;
 }
 
-.mainfooter p {
+.mainFooter p {
    width: 92%;
-   margin: 2% auto;
+   /* margin: 2% auto;*/
    color: #FFF;
 }
 
+#input {
+  width:90%; 
+  height:59%;
+}
 
 /* The @media rule allows different style rules for different media
    in the same style sheet */
