@@ -1,4 +1,11 @@
+task :default => :karma
+
 desc "Compile scheem grammar"
-task :default do
+task :compile do
   sh 'pegjs -e scheem pegs8.pegjs js/pegs8.js'
+end
+
+desc "karma"
+task :karma => :compile do
+  sh "karma start"
 end

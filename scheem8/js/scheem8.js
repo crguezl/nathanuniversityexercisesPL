@@ -7,6 +7,7 @@
     formatting the test results onto a webpage so you don't have to
     write any HTML.
 
+    *************************************
 */
 
 var evalScheem = function (expr, env) {

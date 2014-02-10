@@ -18,6 +18,7 @@ module.exports = function(config) {
       'js/chai.js',
       'js/jquery-1.10.2.js',
       'js/mocha.js',
+      'js/pegs8.js',
       'js/scheem8.js',
       'js/simpletest.js'
     ],
@@ -59,7 +60,7 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Chrome'],
+    browsers: ['Chrome', "Firefox"],
 
 
     // If browser does not capture in given timeout [ms], kill it

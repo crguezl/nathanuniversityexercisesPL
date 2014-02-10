@@ -33,12 +33,14 @@ suite('add', function() {
             evalScheem(['+', 3, ['+', 2, 2]], {}), 7
         );
     });
+    /*
     test('a dog and a cat', function() {
         assert.deepEqual(
             evalScheem(['+', 'dog', 'cat'], {}),
             42
         );
     });
+    */
 });
 
 
